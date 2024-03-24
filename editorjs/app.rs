@@ -43,7 +43,7 @@ impl Body {
         let result = js_sys::eval(&js_code);
         let output = match result {
             Ok(js_value) => {
-                js_value.as_string().unwrap_or_else(|| "Resultado não é uma string".to_string())
+                js_value.as_string().unwrap_or_else(|| "Result is not a string".to_string())
             }
             Err(e) => {
                 format!("Erro: {:?}", e)
